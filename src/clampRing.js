@@ -1,3 +1,6 @@
+const PERMAWOOD = 'permawood'
+const MILD_STEEL = 'mild steel'
+
 const clampRing = function (
   power_rating // kVA, kW
 ) {
@@ -29,5 +32,16 @@ const clampRing = function (
     clamp_ring_press_screw_diameter = 38
   }
 
-  return { clamp_ring_thickness, clamp_ring_press_screw_diameter }
+  let clamp_ring_material = PERMAWOOD
+  if (power_rating < 2000) {
+    clamp_ring_material = PERMAWOOD
+  } else {
+    clamp_ring_material = MILD_STEEL
+  }
+
+  return {
+    clamp_ring_thickness,
+    clamp_ring_press_screw_diameter,
+    clamp_ring_material,
+  }
 }
