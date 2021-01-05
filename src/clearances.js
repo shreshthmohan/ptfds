@@ -3,11 +3,24 @@
 
 const clearances = function ({
   lt_cable_end_box, // boolean
-  ht_cable_end_box, // boolean
   ht_nominal_voltage, // number, volts (V)
   lt_nominal_voltage, // number, volts (V)
   power_rating, // kVA, kW
 }) {
+  // Error generation
+  if (typeof lt_cable_end_box !== 'boolean') {
+    throw 'Invalid value for lt_cable_end_box'
+  }
+  if (isNaN(ht_nominal_voltage)) {
+    throw 'ht_nominal_voltage is not a number'
+  }
+  if (isNaN(lt_nominal_voltage)) {
+    throw 'lt_nominal_voltage is not a number'
+  }
+  if (isNaN(power_rating)) {
+    throw 'power_rating is not a number'
+  }
+
   // All clearance values in mm
   const air = {
     ht_to_ht: 0,
@@ -100,4 +113,8 @@ const clearances = function ({
     oil.lt_to_yoke = 55
     oil.lt_to_earth = 18
   }
+
+  return { air, oil }
 }
+
+export default clearances
