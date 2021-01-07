@@ -5,7 +5,6 @@ const ALUMINIUM = 'aluminium'
 
 const costFactor = function ({
   ht_conductor_material,
-  lt_conductor_material,
   lt_conductor_cost, // ₹/kg
   ht_conductor_cost, // ₹/kg
   core_crgo_cost, // ₹/kg
@@ -13,7 +12,7 @@ const costFactor = function ({
   // Error generation
 
   let cost_factor
-  const average_conductor_cost = (lt_conductor_cost + ht_conductor_material) / 2
+  const average_conductor_cost = (lt_conductor_cost + ht_conductor_cost) / 2
   if (average_conductor_cost != 0 && core_crgo_cost != 0) {
     cost_factor = core_crgo_cost / average_conductor_cost
   } else {
