@@ -1,6 +1,11 @@
 const COPPER = 'copper'
 const ALUMINIUM = 'aluminium'
-const currentDensity = function (ht_conductor_material, lt_conductor_material) {
+const currentDensity = function ({
+  ht_conductor_material,
+  lt_conductor_material,
+}) {
+  //TODO: error generation
+
   let ht_current_density // A/mm²
   let lt_current_density // A/mm²
   if (ht_conductor_material === COPPER) {
