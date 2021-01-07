@@ -1,5 +1,14 @@
 const COPPER = 'copper'
 const ALUMINIUM = 'aluminium'
+
+// Design note:
+// Current density affect losses. Higher current density leads to higher losses.
+// The way to reduce losses is by increasing the conductor cross-sectional area.
+// Increase in cross-sectional area leads to lower current density and in turn lower
+// resistive losses
+// Do note that increasing cross-sectional area increase the cost of the transformer as well.
+// So you need to find the right compormise.
+
 const currentDensityMax = function ({
   ht_conductor_material,
   lt_conductor_material,
