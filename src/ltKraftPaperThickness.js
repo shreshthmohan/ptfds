@@ -17,7 +17,8 @@ const ltKraftPaperThickness = function (
       lt_kraft_paper_thickness = 7
     } else {
       lt_kraft_paper_thickness = 8
-      // TODO: Ask what's the limit
+      // TODO: Ask what's the limit for conductor area
+      // Rather what's the dielectric strength of kraft paper
     }
   } else if (lt_winding_conductor === COPPER) {
     if (minimum_lt_conductor_area <= 50) {
