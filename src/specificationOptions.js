@@ -47,3 +47,7 @@ const PERMAWOOD = 'permawood'
 const FIBRE = 'fibre'
 
 const clamp_ring_material = [MILD_STEEL, PERMAWOOD, FIBRE]
+
+const SPIRAL = 'spiral'
+const DISC = 'disc'
+const CROSSOVER = 'crossover'
