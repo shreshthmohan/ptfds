@@ -33,7 +33,7 @@ const ltKraftPaperThickness = function (
     throw 'Invalid LT winding conductor material'
   }
 
-  return lt_kraft_paper_thickness
+  return lt_kraft_paper_thickness / 40 // convert from mil to mm
 }
 
 // console.log(ltKraftPaperThickness(85, 'copper'))
